@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div style="border:2px solid lightblue; background-color:lightcyan" class="p-5">
+<h2 class="text-center pb-4" style="margin-top:60px"> Available Products List : </h2>
+<table class="table">
+
+<tr>
+<th>Product No</th>
+<th>Product Description</th>
+<th>Unit Price</th>
+<th>Promotion</th>
+<th>Estimated Delivery Date</th>
+
+</tr>
+{% for row in rows %}
+ <tr>
+   <td>{{row[0]}}</td>
+   <td>{{row[1]}}</td>
+   <td>{{row[2]}}</td>
+   <td>{{row[3]}}</td>
+   <td>{{row[4]}}</td> 
+
+ </tr>    
+
+{% endfor %}
+</table>
+
+<a href='/placeOrder'><button type="button" class="btn btn-info btn-lg">Buy Now</button> </a>
+
+</div>
+
+    <div class="container p-4" style="margin-top:10px; border:2px solid lightblue; background-color:LightYellow">
+      <div class="d-flex justify-content-between">
+        <h2>Smartphone</h2>
+        <h4>Brand New Phones</h4>
+      </div>
+      <br />
+      <div class="card-deck">
+        <div class="card">
+          <img src="static/images/phone/phone-1.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Xiaomi Note 8 plus</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content.
+            </p>
+            <h5>$499</h5>
+            
+          </div>
+        </div>
+        <div class="card">
+          <img src="static/images/phone/phone-2.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Iphone 11 pro</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content.
+            </p>
+            <h5>$999</h5>
+            
+          </div>
+        </div>
+        <div class="card">
+          <img src="static/images/phone/phone-3.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Samsung Galaxy Note 10+</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content.
+            </p>
+            <h5>$799</h5>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+        <div class="container p-4 mb-4" id="products" style="margin-top:10px; border:2px solid lightblue; background-color:LemonChiffon">
+      <div class="d-flex justify-content-between">
+        <h2>Laptop</h2>
+        <h4>Brand New Laptops</h4>
+      </div>
+      <br />
+      <div class="card-deck">
+        <div class="card">
+          <img
+            src="static/images/laptop/product-1.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">ASUS VivoBook</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content.
+            </p>
+            <h5>$999</h5>
+            
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="static/images/laptop/product-2.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Razer Blade 15</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content.
+            </p>
+            <h5>$27999</h5>
+            
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="static/images/laptop/product-3.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Xioami Mi Notebook Pro</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content.
+            </p>
+            <h5>$999</h5>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}
